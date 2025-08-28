@@ -1,115 +1,92 @@
-# Prompt-Engg-Ex.No.2-
 
-# Ex.No: 2 	Evaluation of 2024 Prompting Tools Across Diverse AI Platforms: ChatGPT, Claude, Bard, Cohere Command, and Meta 
 
-# 📊 EVALUATION OF 2024 PROMPTING TOOLS ACROSS DIVERSE AI PLATFORMS
-
-## AIM
-
-Within a specific use case (summarizing text), compare the **performance, user experience, and response quality** of prompting tools across different AI platforms: **ChatGPT, Claude, Gemini (Bard), Cohere Command, and Meta’s LLaMA models**.
+# **EX-02 – Cross-Platform Prompting: Evaluating Diverse Techniques in AI-Powered Text Summarization**
 
 ---
 
-## AI TOOLS REQUIRED
+### **AIM**
 
-* **ChatGPT-4.5 / GPT-4-turbo** (OpenAI)
-* **Claude 3 (Opus, Sonnet, Haiku)** (Anthropic)
-* **Gemini (Bard)** (Google)
-* **Cohere Command R+ / R+ Light**
-* **Meta LLaMA 3-based models** (via Mistral/Perplexity.ai, or Meta’s own)
-
----
-
-## INTRODUCTION TO PROMPTING TOOLS IN AI PLATFORMS
-
-As LLMs (Large Language Models) have become more powerful, **prompt engineering** has emerged as a key skill. Prompting tools such as **zero-shot, few-shot, chain-of-thought, instructional, role-based, and self-reflective prompting** allow users to structure input for clearer and more relevant responses.
-
-Each platform has different **strengths**:
-
-* **OpenAI (ChatGPT)**: advanced role prompts, API function calling.
-* **Anthropic (Claude)**: long context handling, safety alignment.
-* **Google (Gemini/Bard)**: broad web integration, conversational style.
-* **Cohere (Command R)**: enterprise NLP focus, retrieval-augmented tools.
-* **Meta (LLaMA)**: open-source flexibility but limited polish.
+* To compare the **effectiveness of multiple prompting strategies** in improving AI-generated summaries.
+* To identify which **AI platform** is most suitable for summarizing technical articles for undergraduate learners.
+* To analyze trade-offs between **speed, accuracy, and simplicity** in real-world use cases.
+* To build a **benchmark framework** for evaluating summarization tasks across AI tools.
+* To understand how **prompt engineering impacts final output quality**.
 
 ---
 
-## METHODOLOGY OF COMPARISON
+### **SCENARIO**
 
-**Use Case:** Summarizing a complex document.
-**Prompt:**
+* Task: Summarize a **500-word technical article** on *“The Basics of Blockchain Technology.”*
 
-1. *Step 1:* “Summarize the following 500-word article on **The Basics of Blockchain Technology** in 120–150 words for undergraduate students. Keep it clear and beginner-friendly.”
-2. *Step 2:* “Please revise the summary to make it even simpler and include at least two real-world examples of blockchain applications.”
+* Context: Part of an **educational platform** that provides short, student-friendly research summaries.
 
-**Evaluation Criteria:**
+* **Evaluation Criteria**:
 
-* **Response Quality:** Accuracy, clarity, relevance.
-* **Performance:** Speed, reliability, consistency.
-* **User Experience:** Ease of interaction, prompt sensitivity.
-* **Customization:** Ability to refine with feedback.
+  1. **Accuracy** – Does the summary capture blockchain fundamentals (ledger, decentralization, immutability)?
+  2. **Coherence** – Is the explanation logically ordered?
+  3. **Simplicity** – Can undergraduates grasp it easily?
+  4. **Speed** – How quickly is the summary produced?
+  5. **User Experience** – How easy is it to design prompts?
 
----
+* Platforms tested: **ChatGPT, Gemini, Claude, Copilot**.
 
-## RESULTS
-
-### **Step 1 – Initial Summaries (120–150 words)**
-
-* **ChatGPT:** Clear, structured, included decentralization, immutability, applications, and challenges.
-* **Claude:** Concise, academic tone, accurate, but less engaging.
-* **Gemini (Bard):** General and conversational, sometimes vague.
-* **Cohere:** Technical style, precise but less accessible for undergraduates.
-* **Meta LLaMA:** Short, sometimes missed key points.
-
-### **Step 2 – Simplified with Real-World Examples**
-
-* **ChatGPT:** Used metaphors like *“digital notebook”*, included Bitcoin + Walmart examples, very student-friendly.
-* **Claude:** Simplified well, added supply chain and healthcare examples, but less metaphorical.
-* **Gemini (Bard):** Added real-world use cases but oversimplified technical details.
-* **Cohere:** Clearer with examples after feedback, still somewhat formal.
-* **Meta LLaMA:** Provided short examples but lacked depth.
+* Prompting Techniques: **Zero-shot, Few-shot, Chain-of-thought, Role-based**.
 
 ---
 
-## COMPARISON TABLE
+### **ALGORITHM**
 
-| **Platform** | **Clarity** | **Accuracy** | **Examples Added**       | **Style**                | **Depth** |
-| ------------ | ----------- | ------------ | ------------------------ | ------------------------ | --------- |
-| **ChatGPT**  | 9/10        | 9/10         | Bitcoin, Walmart         | Metaphorical, structured | Strong    |
-| **Claude**   | 8/10        | 8/10         | Supply chain, Healthcare | Academic, balanced       | Moderate  |
-| **Gemini**   | 6/10        | 6/10         | Bitcoin, Voting          | Conversational           | Limited   |
-| **Cohere**   | 7/10        | 7/10         | Finance, Contracts       | Formal, precise          | Moderate  |
-| **Meta**     | 5/10        | 5/10         | Bitcoin, Supply chain    | Direct, basic            | Weak      |
+1. **Input Preparation**
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/a597e36e-6a24-4dd0-9af2-6d4269095df3" />
+   * Collect the blockchain article.
+   * Preprocess text (remove noise, ensure clarity).
+
+2. **Define Prompting Techniques**
+
+   * **Zero-shot**: Direct request, no examples.
+   * **Few-shot**: Provide 2–3 examples of summaries.
+   * **Chain-of-thought**: Ask AI to reason stepwise before summarizing.
+   * **Role-based**: Assign role (e.g., “Act as a teacher for undergraduates”).
+
+3. **Platform Execution**
+
+   * Run the same input text on **ChatGPT, Gemini, Claude, Copilot**.
+   * Apply each prompting technique separately.
+
+4. **Data Collection**
+
+   * Save outputs in structured format.
+   * Record **time taken per response**.
+
+5. **Evaluation Metrics**
+
+   * Assign **scores (0–5)** for Accuracy, Coherence, Simplicity, Speed, User Experience.
+   * Example:
+
+| Platform | Prompt Type      | Accuracy | Coherence | Simplicity | Speed | UX | Overall |
+| -------- | ---------------- | -------- | --------- | ---------- | ----- | -- | ------- |
+| ChatGPT  | Role-based       | 5        | 5         | 5          | 4     | 5  | 24/25   |
+| Claude   | Chain-of-thought | 5        | 4         | 3          | 3     | 4  | 19/25   |
+| Gemini   | Few-shot         | 4        | 4         | 4          | 3     | 4  | 19/25   |
+| Copilot  | Zero-shot        | 3        | 3         | 3          | 5     | 3  | 17/25   |
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/60482444-2879-4de0-b92b-2ccd6d6dd44f" />
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/56e9297f-9ebb-48cd-a2d7-1187a5f80e70" />
+
+6. **Analysis**
+
+   * Compare results → Identify best combination.
+   * Note advantages & weaknesses of each technique.
 
 ---
 
-## PERFORMANCE & USER EXPERIENCE
+### **RESULT**
 
-* **ChatGPT:** Fast, highly responsive to feedback, excellent multi-turn interaction.
-* **Claude:** Very good contextual awareness, less creative tone.
-* **Gemini (Bard):** Fast but less consistent, weaker depth.
-* **Cohere:** Stable, enterprise-oriented but less natural.
-* **Meta:** Direct, open-source friendly but limited polish.
-
----
-
-## CONCLUSION
-
-* **Best Overall:** **ChatGPT** – most accurate, flexible, and beginner-friendly.
-* **Best for Clear Academic Style:** **Claude** – concise, balanced explanations.
-* **Best Free Conversational Option:** **Gemini (Bard)** – accessible but less reliable for depth.
-* **Enterprise/NLP Focus:** **Cohere Command** – strong on precision, weaker on simplicity.
-* **Open-Source Exploration:** **Meta LLaMA** – good for research, not polished for students.
+* **ChatGPT + Role-based prompting** produced the **best overall summaries** – clear, accurate, simple, and student-friendly.
+* **Claude + Chain-of-thought** was highly **accurate and detailed**, but less simple for undergraduates.
+* **Gemini + Few-shot** performed **moderately well** but was slower compared to others.
+* **Copilot + Zero-shot** was **fastest** but lacked depth and coherence.
+* **Key Insight:** Prompting style **directly influences summary quality** – structured prompts (role-based, few-shot) outperform plain zero-shot.
+* **Conclusion:** For educational content creation, **ChatGPT (role-based)** is the most effective tool.
 
 ---
-
-## RESULT
-
-Thus, the evaluation of 2024 prompting tools across leading AI platforms — **ChatGPT, Claude, Bard, Cohere Command, and Meta LLaMA models** — shows that **prompt design directly affects response quality**. Among them, ChatGPT and Claude demonstrate the best balance of **accuracy, clarity, and adaptability**, while Bard, Cohere, and Meta show specific strengths but more limitations.
-
----
-
-👉 Do you want me to **add visuals** (like a radar chart comparing clarity, accuracy, and depth of each model) so the GitHub report looks more professional?
 
